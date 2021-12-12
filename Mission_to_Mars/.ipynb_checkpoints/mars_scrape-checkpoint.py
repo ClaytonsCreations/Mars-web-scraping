@@ -350,7 +350,9 @@
    "cell_type": "code",
    "execution_count": null,
    "id": "667c2b8b",
-   "metadata": {},
+   "metadata": {
+    "scrolled": true
+   },
    "outputs": [],
    "source": [
     "html_hemispheres = browser.html\n",
