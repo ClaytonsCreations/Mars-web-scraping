@@ -21,30 +21,32 @@
                 <h2>Latest Mars News</h2>
                 <h4>{{data.news_title}}</h4>
                 <p>{{data.news_p}}</p>
-                <br>
+            </div>
         </div>
 
         <div class='row'>
             <div class='col-md-8'
-                <img class="img-fluid" src="{{data.featured_image_url}}" alt="Mars Featured Image">
+            <img src="{{data.featured_image_url}}" class='img-fluid' alt="Mars Featured Image">
+            </div>
 
             <div class='col-md-4'>
                 <h2>Mars Facts</h2>
                 {{data.mars_html_table}}
             </div>
-            </div>
+        </div>
 
         <div class='row'>
-            {% for hemisphere in hemisphere_image_data %}
+            {% for hemisphere in data.hemisphere_image_data %}
 
-        <div class="col-md-4">
-          <h3 class="text-center">Mars Hemispheres</h3>
-            <div class="card" style="width: 18rem;">
-                <img src="{data.hemisphere.img_url}" class="card-img-top" alt="Mars Hemisphere">
-                <div class="card-body">
-                  <p class="card-text">{data.hemisphere.img_title}.</p>
+            <div class="col-md-4">
+            <h3 class="text-center">Mars Hemispheres</h3>
+                <div class="card" style="width: 18rem;">
+                    <img src="{data.hemisphere.img_url}" class="card-img-top" alt="Mars Hemisphere">
+                    <div class="card-body">
+                    <p class="card-text">{data.hemisphere.img_title}.</p>
                 </div>
-              </div>
+            </div>
+        </div>
               {%endfor%}
     
 </body>
