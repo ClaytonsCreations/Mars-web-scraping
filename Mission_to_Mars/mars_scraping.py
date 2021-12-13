@@ -5,14 +5,14 @@ from webdriver_manager.chrome import ChromeDriverManager
 from splinter import Browser
 import time
 
-
 def init_browser():
     executable_path = {'executable_path': ChromeDriverManager().install()}
     browser = Browser('chrome', **executable_path, headless=False)
+    return browser
 
 def scrape():
-    browser = init_browser()
-
+    browser=init_browser()
+    mars_scrape={}
 
 # # NASA Mars News
 # URL of page to be scraped
@@ -143,7 +143,7 @@ browser.quit()
 hemisphere_image_data
 
 
-scraped_data = {
+mars_scrape = {
     "news_title": news_title,
     "news_p": news_p,
     "featured_image_url": featured_image_url,
@@ -151,14 +151,4 @@ scraped_data = {
     "hemisphere_image_data": hemisphere_image_data
 }
 
-return scraped_data
 
-# Items from each step: 
-# news_title
-# news_p
-# 
-# featured_image_url
-# 
-# mars_html_table
-# 
-# hemisphere_image_data
